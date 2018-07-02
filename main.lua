@@ -1,4 +1,9 @@
 --[[
+    -- AI feature --
+
+    Author: Eunsub Lee
+    petlee@ucdavis.edu
+
     -- Main Program --
 
     Author: Colton Ogden
