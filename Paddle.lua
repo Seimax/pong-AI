@@ -56,7 +56,7 @@ function Paddle:render()
 end
 
 function Paddle:moveUp(ball)
-    if ball.y >= self.y + 10 then
+    if ball.y > self.y - 10 then
         return true
     else
         return false
@@ -64,7 +64,7 @@ function Paddle:moveUp(ball)
 end
 
 function Paddle:moveDown(ball)
-    if ball.y <= self.y + 10 then
+    if ball.y < self.y + 10 then
         return true
     else
         return false
