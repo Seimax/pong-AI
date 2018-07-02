@@ -1,7 +1,4 @@
 --[[
-    GD50 2018
-    Pong Remake
-
     -- Main Program --
 
     Author: Colton Ogden
@@ -231,10 +228,10 @@ function love.update(dt)
     --
     -- paddles can move no matter what state we're in
     --
-    -- player 1
-    if love.keyboard.isDown('w') then
+    -- player 1 is AI
+    if player1:moveDown(ball) then
         player1.dy = -PADDLE_SPEED
-    elseif love.keyboard.isDown('s') then
+    elseif player1:moveUp(ball) then
         player1.dy = PADDLE_SPEED
     else
         player1.dy = 0

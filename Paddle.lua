@@ -1,11 +1,5 @@
 --[[
-    GD50 2018
-    Pong Remake
-
     -- Paddle Class --
-
-    Author: Colton Ogden
-    cogden@cs50.harvard.edu
 
     Represents a paddle that can move up and down. Used in the main
     program to deflect the ball back toward the opponent.
@@ -59,4 +53,20 @@ end
 ]]
 function Paddle:render()
     love.graphics.rectangle('fill', self.x, self.y, self.width, self.height)
+end
+
+function Paddle:moveUp(ball)
+    if ball.y >= self.y + 10 then
+        return true
+    else
+        return false
+    end
+end
+
+function Paddle:moveDown(ball)
+    if ball.y <= self.y + 10 then
+        return true
+    else
+        return false
+    end
 end
